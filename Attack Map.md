@@ -1,8 +1,8 @@
-## Initial Reconnaissance:
+# Initial Reconnaissance:
 Main Nmap Scan: nmap -v -A -sS 10.11.1.X
 Alternate Connect Scan: nmap -v -sT -p 0-10000 10.11.1.X
 
-## Ports and Services:
+# Ports and Services:
 # 21: FTP
 		
 Methods and Tools:

@@ -1,2 +1,2 @@
 # OSCP-Notes
-Notes and scripts from OSCP/PWK
+Some notes and useful scripts from PWK

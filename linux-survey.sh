@@ -39,10 +39,8 @@ df;
 tail -n50 /var/log/cron /var/log/secure /var/log/messages; 
 #Check out cronjobs 
 cat /etc/crontab 
-#See if we can sudo anything
-sudo -l
 #Check files modified since we got on 
-sudo find / \( -path /proc -prune -o -path /sys -prune \) -o -mmin -15 -type f -print |  xargs ls -latr
+find / \( -path /proc -prune -o -path /sys -prune \) -o -mmin -15 -type f -print |  xargs ls -latr
 
 
 

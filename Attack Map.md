@@ -236,10 +236,10 @@ Windows Enum: https://github.com/azmatt/windowsEnum
 
 WinExpSugg: https://github.com/GDSSecurity/Windows-Exploit-Suggester 
 
-WinPrivChk: https://github.com/pentestmonkey/windows-privesc-check 
+WinPrivChk: https://github.com/pentestmonkey/windows-privesc-check \
 
 
-\\__Common Service Windows Privesc:__
+\__Common Service Windows Privesc:__
 
 *sc config SSDPSRV start= “auto”*\
 *net start SSDPSRV*\

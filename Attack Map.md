@@ -32,7 +32,6 @@ Commands:
 
 *hydra -l user -P /usr/share/wordlists/rockyou.gz 10.11.1.X SSH* 
 
-\
 ## 25: SMTP
 
 Methods:
@@ -47,7 +46,6 @@ Commands:
 _nmap -v 10.11.1.X --script “smtp*”_ \
 *smtp-user-enum -u username -U usernamelist.txt -t 10.11.1.X* 
 
-\
 ## 53: DNS
 	
 Methods:
@@ -62,7 +60,6 @@ Commands:
 _nmap -v 10.11.1.X --script “dns*”_ \
 *dnsenum URL.com* 
 
-\
 ## 80/443/8080: HTTP/HTTPS
 
 Methods:
@@ -82,7 +79,6 @@ Commands:
 _nmap -v 10.11.1.X --script “http*”_ \
 *Nikto -h 10.11.1.X* 
 
-\
 ## 110: POP3
 	
 Methods:
@@ -97,7 +93,6 @@ Commands:
 _nmap -v 10.11.1.X --script “pop*”_ \
 *nc 10.11.1.X 110* 
 
-\
 ## 135: RPC
 	
 Methods:
@@ -113,8 +108,7 @@ Commands:
 _nmap -v 10.11.1.X --script “rpc*”_ \
 *enum4linux 10.11.1.X* \
 *rpcclient -U “” 10.11.1.X* for null session 
-
-\	
+	
 ## 139: NETBIOS
 	
 Methods:
@@ -129,7 +123,6 @@ Commands:
 *nbtscan -v 10.11.1.X* \
 *enum4linux 10.11.1.X* 
 
-\
 ## 445: SMB
 	
 Methods:
@@ -150,9 +143,9 @@ _nmap -v 10.11.1.X --script “smb*”_ \
 *smbmap -u jsmith -p password1 -d workgroup -H 192.168.0.1* \
 *nbtscan -v 10.11.1.X* 
 
-\
 
-\
+
+
 # Windows Post-Exploitation
 	
 Powershell File Download: \

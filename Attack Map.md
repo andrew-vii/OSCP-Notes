@@ -192,7 +192,6 @@ WinPrivChk: https://github.com/pentestmonkey/windows-privesc-check
 *net start upnphost*
 \
 \
-\
 # Linux Post-Exploitation
 
 Shell Cheatsheet: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet 

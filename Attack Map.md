@@ -15,191 +15,138 @@ nmap NSE FTP scripts \
 dotdotpwn \
 
 Commands:
-
-_nc 10.11.1.X 21_  Commands: https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands \
+https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands \
+_nc 10.11.1.X 21_ \
 _nmap -v 10.11.1.X --script “ftp*”_ \
 _dotdotpwn -h 10.11.1.X -m ftp_ 
+
 \
 \
 ## 22: SSH
 
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-hydra
+Service version research \
+ExploitDB/Google \
+THC-Hydra \
 
 Commands:
 
-Hydra -l user -P /usr/share/wordlists/rockyou.gz 10.11.1.X SSH
+*hydra -l user -P /usr/share/wordlists/rockyou.gz 10.11.1.X SSH* \
 
 
 ## 25: SMTP
 
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-Nmap NSE scripts
-
-smtp-user-enum
-
+Service version research \
+ExploitDB/Google \
+Nmap NSE scripts \
+smtp-user-enum \
 
 Commands:
 
-nmap -v 10.11.1.X --script “smtp*”
-
-smtp-user-enum -u username -U usernamelist.txt -t 10.11.1.X
-
+_nmap -v 10.11.1.X --script “smtp*”_ \
+*smtp-user-enum -u username -U usernamelist.txt -t 10.11.1.X* \
 
 ## 53: DNS
 	
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-Nmap NSE scripts
-
-DNSenum
+Service version research \
+ExploitDB/Google \
+Nmap NSE scripts \
+DNSenum \ 
 
 
 Commands:
 
-nmap -v 10.11.1.X --script “dns*”
-
-dnsenum URL.com
-
+_nmap -v 10.11.1.X --script “dns*”_ \
+*dnsenum URL.com* \
 
 ## 80/443/8080: HTTP/HTTPS
 
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-Nmap NSE scripts
-
-Dirbuster
-
-Web Browser (Iceweasel)
-
-Nikto
-
-Burpsuite
-
-Cadaver/davtest
-
-WPscan
-
+Service version research \
+ExploitDB/Google \
+Nmap NSE scripts \
+Dirbuster \
+Web Browser (Iceweasel) \
+Nikto \
+Burpsuite \
+Cadaver/davtest \
+WPscan \
 
 Commands:
 
-nmap -v 10.11.1.X --script “http*”
-
-Nikto -h 10.11.1.X
-
+_nmap -v 10.11.1.X --script “http*”_ \
+*Nikto -h 10.11.1.X* \
 
 ## 110: POP3
 	
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-Nmap NSE scripts
-
-Netcat/telnet manual interaction
-
+Service version research \
+ExploitDB/Google \
+Nmap NSE scripts \
+Netcat/telnet interaction \
 
 Commands:
 
-nmap -v 10.11.1.X --script “pop*”
-
-nc 10.11.1.X 110
-
+_nmap -v 10.11.1.X --script “pop*”_ \
+*nc 10.11.1.X 110* \
 
 ## 135: RPC
 	
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-Nmap NSE scripts
-
-enum4linux
-
-rpcclient
-
+Service version research \
+ExploitDB/Google \
+Nmap NSE scripts \
+enum4linux \
+rpcclient \
 
 Commands:
 
-nmap -v 10.11.1.X --script “rpc*”
-
-enum4linux 10.11.1.X
-
-rpcclient -U “” 10.11.1.X for null session
-
+_nmap -v 10.11.1.X --script “rpc*”_ \
+*enum4linux 10.11.1.X* \
+*rpcclient -U “” 10.11.1.X* for null session \
 	
 ## 139: NETBIOS
 	
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-nbtscan
-
-enum4linux
-
+Service version research \
+ExploitDB/Google \
+nbtscan \
+enum4linux \
 
 Commands:
 
-nbtscan -v 10.11.1.X
-
-enum4linux 10.11.1.X
+*nbtscan -v 10.11.1.X* \
+*enum4linux 10.11.1.X* \
 
 
 ## 445: SMB
 	
 Methods:
 
-Service version research
-
-ExploitDB/Google
-
-Nmap NSE scripts
-
-enum4linux
-
-smbclient
-
-smbmap
-
-nbtscan
-
+Service version research \
+ExploitDB/Google \
+Nmap NSE scripts \
+enum4linux \
+smbclient \
+smbmap \
+nbtscan \
 
 Commands:
 
-nmap -v 10.11.1.X --script “smb*”
-
-enum4linux 10.11.1.X
-
-smbclient "//10.11.1.128/wwwroot" - Connects to smb shares mapped with enum4linux
-
-smbmap -u jsmith -p password1 -d workgroup -H 192.168.0.1
-
-nbtscan -v 10.11.1.X
+_nmap -v 10.11.1.X --script “smb*”_ \
+*enum4linux 10.11.1.X* \
+*smbclient "//10.11.1.128/wwwroot"* - Connects to smb shares mapped with enum4linux \
+*smbmap -u jsmith -p password1 -d workgroup -H 192.168.0.1* \
+*nbtscan -v 10.11.1.X* \
 
 
 

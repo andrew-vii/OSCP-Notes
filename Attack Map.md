@@ -21,6 +21,7 @@ _nmap -v 10.11.1.X --script “ftp*”_ \
 _dotdotpwn -h 10.11.1.X -m ftp_ 
 
 
+
 ## 22: SSH
 
 Methods:
